@@ -4,7 +4,7 @@ from thrift.protocol.TCompactProtocol import TCompactProtocol
 from boteater_lib import BoteaterService
 from boteater_lib.ttypes import *
 
-my_token = None   ##CHROME HEADER TOKEN
+my_token = None   ##CHROME HEADER TOKEN // NONE FOR QR LOGIN
 
 def qrLogin():
     headers= {
