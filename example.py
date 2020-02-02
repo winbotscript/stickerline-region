@@ -1,7 +1,7 @@
 import requests, json
 
 
-list_country = ['cn', 'es', 'hk', 'id', 'jp', 'kr', 'mx', 'my', 'sa', 'sg', 'th', 'us', 'vn', 'ph', 'in']
+list_country = ['ir', 'cn', 'es', 'hk', 'id', 'jp', 'kr', 'mx', 'my', 'sa', 'sg', 'th', 'us', 'vn', 'ph', 'in']
 list_header = ["ios_ipad", "chrome", "ios", "android_lite"]
 print("1. Download Free Region Sticker")
 print("2. Download Paid Region Sticker")
