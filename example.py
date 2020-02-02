@@ -24,7 +24,7 @@ if select in [1,2,3]:
                 data["header"] = my_app
                 data["type"] = "free"
                 data["id"] =  product_id
-                result = json.loads(requests.post("http://"+region+"line.boteater.us/get_sticker, data=data).text)
+                result = json.loads(requests.post("http://"+region+".line.boteater.us/get_sticker, data=data).text)
                 print(result)
             else:
                 raise Exception("[ Error ] Wrong header")
@@ -41,12 +41,12 @@ if select in [1,2,3]:
                 data["header"] = my_app
                 data["type"] = "paid"
                 data["id"] =  product_id
-                result = json.loads(requests.post("http://"+region+"line.boteater.us/get_sticker", data=data).text)
+                result = json.loads(requests.post("http://"+region+".line.boteater.us/get_sticker", data=data).text)
                 print(result)
             else:
                 raise Exception("[ Error ] Wrong header")
         if select == 3:
-            result = json.loads(requests.get("http://"+region+"line.boteater.us/list_sticker").text)
+            result = json.loads(requests.get("http://"+region+".line.boteater.us/list_sticker").text)
             for data in result["result"]:
                 print("Name : " + data["name"])
                 print("Author : " + data["author"])
