@@ -53,7 +53,7 @@ def getMid(my_token):
     transport.close()
     return mid
     
-list_country = ["id", "th", "sg", "vn", "jp", "cn"]
+list_country = ['cn', 'es', 'hk', 'id', 'jp', 'kr', 'mx', 'my', 'sa', 'sg', 'th', 'us', 'vn', 'ph', 'in']
 print("1. Download Free Region Sticker")
 print("2. Download Paid Region Sticker")
 print("3. Free Sticker List")
@@ -73,7 +73,7 @@ if select in [1,2,3]:
             data["header"] = "chrome"
             data["type"] = "free"
             data["id"] =  product_id
-            result = json.loads(requests.post("https://sticker-"+region+".boteater.us", data=data).text)
+            result = json.loads(requests.post("http://"+region+"line.boteater.us/get_sticker, data=data).text)
             print(result)
         if select == 2:
             if my_token == None:
@@ -86,10 +86,10 @@ if select in [1,2,3]:
             data["header"] = my_app
             data["type"] = "paid"
             data["id"] =  product_id
-            result = json.loads(requests.post("https://sticker-"+region+".boteater.us", data=data).text)
+            result = json.loads(requests.post("http://"+region+"line.boteater.us/get_sticker, data=data).text)
             print(result)
         if select == 3:
-            result = json.loads(requests.get("https://sticker-"+region+".boteater.us/freesticker").text)
+            result = json.loads(requests.get("http://"+region+"line.boteater.us/list_sticker").text)
             for data in result["result"]:
                 print("Name : " + data["name"])
                 print("Author : " + data["author"])
